@@ -58,9 +58,7 @@ public class Contact {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public void remove() {
-    	System.out.println("Deleted Contact Details SuccessFully");
-    }
+
 
     public void editExistingContact(){
         System.out.println("Enter firstname");

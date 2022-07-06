@@ -109,8 +109,7 @@ public class AddressBook {
 
 			case 4:
 				System.out.println("");
-				System.out.println("               " + "First Name " + " Last Name" + " Address" + " City" + " State"
-						+ " Zip" + " Number" + " E-mail");
+
 				addressBook.show();
 				break;
 
