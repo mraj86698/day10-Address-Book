@@ -34,6 +34,7 @@ public class AddressBook {
 			add();
 		} else
 			System.out.println("Invalid");
+			System.out.println();
 
 	}
 
@@ -54,16 +55,16 @@ public class AddressBook {
 		if (list.size() == 0) {
 			System.out.println("No Record Found !!!!!!");
 		} else {
-        System.out.println("Enter first name and last name to delete your details ");
-        System.out.println("Enter first name");
+        System.out.println("Enter first name :");
         String firstName = sc.next();
-        System.out.println("Enter last name");
-        String lastName = sc.next();
-        for (Contact contact:list){
-            if(contact.getFirstName().equals(firstName) && contact.getLastName().equals(lastName)){
-                list.remove(contact);
-            }
-        }
+
+        for (int i = 0; i < list.size(); i++) {
+			Contact contact = list.get(i);
+			if (firstName.equals(contact.firstName)) {
+				list.remove(i);
+				System.out.println("Deleted Successfully !!!");
+			}
+		}
 		}
     }
 	public void show(){
@@ -84,19 +85,20 @@ public class AddressBook {
 		AddressBook addressBook = new AddressBook();
 
 		int input;
-		Scanner scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		while (true) {
 			System.out.println(" Enter 1 for Add Contact");
 			System.out.println(" Enter 2 for Update Contact ");
 			System.out.println(" Enter 3 for DeleteContact");
 			System.out.println(" Enter 4 for showing");
 
-			input = scanner.nextInt();
+			input = sc.nextInt();
 			switch (input) {
 			case 1:
 				addressBook.add();
 				System.out.println(addressBook.list);
 				System.out.println("Contact Added Successfully");
+				System.out.println();
 				break;
 			case 2:
 				addressBook.editContact();
@@ -116,6 +118,7 @@ public class AddressBook {
 			case 5:
 				System.exit(0);
 			}
+
 		}
 
 
