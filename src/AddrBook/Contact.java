@@ -26,7 +26,7 @@ public class Contact {
 	}
 	@Override
     public String toString() {
-        return "Added New Contact: " +
+        return "Contact: " +
                 " \nFirstName = " + firstName +
                 " \nLastName = " + lastName +
                 " \nAddress = " + address +

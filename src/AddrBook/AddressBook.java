@@ -88,7 +88,7 @@ public class AddressBook {
 		Scanner sc = new Scanner(System.in);
 		while (true) {
 			System.out.println(" Enter 1 for Add Contact");
-			System.out.println(" Enter 2 for Update Contact ");
+			System.out.println(" Enter 2 for Edit Contact ");
 			System.out.println(" Enter 3 for DeleteContact");
 			System.out.println(" Enter 4 for showing");
 
